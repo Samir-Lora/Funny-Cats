@@ -16,8 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="180" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LzU-Z5-C4r">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="180" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LzU-Z5-C4r">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CatsCell" id="7Z8-Dz-Mit" customClass="CatsTableViewCell" customModule="Funny_Cats" customModuleProvider="target">
@@ -28,21 +29,25 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qR7-aA-98S">
-                                                    <rect key="frame" x="20" y="6" width="199.33333333333334" height="150.33333333333334"/>
+                                                    <rect key="frame" x="10" y="0.0" width="383" height="180"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GzU-Aq-jr9">
-                                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150.33333333333334"/>
+                                                            <rect key="frame" x="0.0" y="15" width="150" height="150"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KpE-KS-3jO">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150.33333333333334"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                                                 </imageView>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="150" id="0To-jQ-szf"/>
+                                                                <constraint firstAttribute="height" constant="150" id="pqD-Tw-mGH"/>
+                                                            </constraints>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="e4U-47-qae">
-                                                            <rect key="frame" x="158" y="65" width="41.333333333333343" height="20.333333333333329"/>
+                                                            <rect key="frame" x="158" y="80" width="225" height="20.333333333333329"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQz-ZT-suQ">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="20.333333333333332"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="225" height="20.333333333333332"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -51,15 +56,15 @@
                                                         </stackView>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="GzU-Aq-jr9" firstAttribute="top" secondItem="qR7-aA-98S" secondAttribute="topMargin" id="jvn-Ty-2kF"/>
-                                                        <constraint firstItem="e4U-47-qae" firstAttribute="top" secondItem="qR7-aA-98S" secondAttribute="top" constant="65" id="l10-qU-5hy"/>
+                                                        <constraint firstAttribute="trailing" secondItem="e4U-47-qae" secondAttribute="trailing" id="gDE-CW-9cv"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="qR7-aA-98S" firstAttribute="leading" secondItem="qhi-ZT-sip" secondAttribute="leadingMargin" id="JRP-Qn-XrG"/>
-                                                <constraint firstAttribute="trailing" secondItem="qR7-aA-98S" secondAttribute="trailing" constant="173.66666666666666" id="dAa-UG-nf7"/>
-                                                <constraint firstItem="qR7-aA-98S" firstAttribute="top" secondItem="qhi-ZT-sip" secondAttribute="topMargin" constant="-5" id="usv-Qh-VnJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="qR7-aA-98S" secondAttribute="trailing" id="OT9-bP-n6b"/>
+                                                <constraint firstItem="qR7-aA-98S" firstAttribute="top" secondItem="qhi-ZT-sip" secondAttribute="top" id="l8P-fp-3a0"/>
+                                                <constraint firstAttribute="bottom" secondItem="qR7-aA-98S" secondAttribute="bottom" id="oYS-a0-kaz"/>
+                                                <constraint firstItem="qR7-aA-98S" firstAttribute="leading" secondItem="qhi-ZT-sip" secondAttribute="leading" constant="10" id="tD5-Hp-if9"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -72,12 +77,6 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LzU-Z5-C4r" secondAttribute="bottom" id="3HR-rv-Tpu"/>
-                            <constraint firstItem="LzU-Z5-C4r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ocs-Qs-OF9"/>
-                            <constraint firstItem="LzU-Z5-C4r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lrq-Le-D9A"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LzU-Z5-C4r" secondAttribute="trailing" id="waF-ny-qlc"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="catsTable" destination="LzU-Z5-C4r" id="hRA-yK-2o0"/>
