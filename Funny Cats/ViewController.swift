@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Funny Cats 3
+//  Funny Cats
 //
 //  Created by Samir on 9/12/22.
 //
